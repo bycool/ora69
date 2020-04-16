@@ -1,0 +1,10 @@
+show user; 查看当前用户名
+
+conn (username); 切换当前用户
+disc 切开与数据库的连接
+passw 修改用户密码，如果想修改其他用户的密码，需要用sys/system用户。
+exit 切断与数据库的链接，同时退出sql*plus。
+
+create user jjd identified by m110226    用户密码不能用数字开始
+
+
