@@ -10,7 +10,7 @@ set pagesize 10 一页显示10行，之后打印表头之后再打印10行。10�
 create user username identified by password  //password不能以数字开头
 
 create user username identified by password
-default tablespace user   //用户的表空间在user上
+default tablespace users   //用户的表空间在users上
 temporary tablespace temp   //用户的临时表建在temp空间
 quota 3m on users  //用户创建的数据对象最大能是3m
 
