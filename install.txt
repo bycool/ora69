@@ -54,7 +54,7 @@
 	 之后会让运行两个脚本。运行一路默认即可。然后安装就算完成。
 
 	$ netca 配置LISTENER，一路默认。提示 listener startup ，exit code is 0.主要已listener.ora配置文件里的host是本机hostname。
-	$ dbca 用于创建数据库实例,图形页面：next,create a database, next,默认next，输入ORACLE_SID(这里是PROD) next，默认next，设置同一密码需勾选第二像并设置密码 next,默认next，取消勾选next，勾选next，设置oracle用的内存大小next，修改下编码(倒数第四个)next,next,finish,ok.读条完之后有个密码配置，可解锁scott帐号，设置密码，ok。还可以安装rlwrap。
+	$ dbca 用于创建数据库实例,图形页面：next,create a database, next,默认next，输入ORACLE_SID(这里是PROD) next，默认next，设置同一密码需勾选第二像并设置密码 next,默认next，取消勾选next，勾选next，设置oracle用的内存大小next，修改下编码，choose from the list of character sets(倒数第四个)next,next,finish,ok.读条完之后有个密码配置，可解锁scott帐号，设置密码，ok。还可以安装rlwrap。
 	基本完毕。
 	
 
