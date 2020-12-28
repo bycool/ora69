@@ -50,13 +50,21 @@ select
 当一个用户创建好后，如果该用户创建了任意一个数据对象，这时，dbms会创建一个对应的方案与该用户对应，方案名和用户名相同。
 
 
+6讲:
 profile管理用户口令：
 概述：profile是口令限制，资源限制的命令集合，当建立数据时，oracle会自动建立名为default的profile，当创建用户没有指定profile时，oracle会将default分配给用户。
 
-
-
 例1，只允许某用户最多尝试三次登录，如果失败三次，锁定用户两天，两天后才能从新登录。
-create profile filename limit 
+SYS@PROD> create profile filename limit failed_login_attempts 3 password_lock_time 2
+Profile created.
+SYS@PROD> alter user username profile profilename;
 
+oracle解锁被锁定用户
+SYS@PROD> alter user username account unlock;
 
+终止口令：
+类似限定时限：比如一个密码最多用10天，宽限期2天。不改密码就锁帐号。
+SYS@PROD> create profile myprofile limit password_life_time 10 password_grace_time 2;
 
+历史口令：
+如果希望用户在修改密码时，不能使用以前使用过的密码，可使用口令历史，这要oralce
