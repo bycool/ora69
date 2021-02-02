@@ -67,4 +67,13 @@ SYS@PROD> alter user username account unlock;
 SYS@PROD> create profile myprofile limit password_life_time 10 password_grace_time 2;
 
 历史口令：
-如果希望用户在修改密码时，不能使用以前使用过的密码，可使用口令历史，这要oralce
+如果希望用户在修改密码时，不能使用以前使用过的密码，可使用口令历史.
+create profile password_history limit password_life_time 10 password_grace_time 2 password_reuse_time 1
+password_reuse_time //指口令可重用时间，即多少天后密码可以被重复使用
+
+删除profile:
+drop profile filename;
+
+
+
+
